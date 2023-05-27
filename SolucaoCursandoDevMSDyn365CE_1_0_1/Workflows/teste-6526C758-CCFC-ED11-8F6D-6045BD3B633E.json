@@ -1,0 +1,140 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "curso_sharedsharepointonline_80120"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "curso_sharedoffice365_1f62e"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "PowerApp",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Createitem_SiteAddress": {
+                  "type": "string",
+                  "description": "Example: https://contoso.sharepoint.com/sites/sitename",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Createitem_ListName": {
+                  "type": "string",
+                  "description": "SharePoint list name",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Createitem_Item": {
+                  "type": "any",
+                  "description": "Item para criar",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Sendanemail_To": {
+                  "type": "string",
+                  "format": "email",
+                  "description": "Specify email addresses separated by semicolons like someone@contoso.com",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Sendanemail_Subject": {
+                  "type": "string",
+                  "description": "Specify the subject of the mail",
+                  "x-ms-powerflows-param-ispartial": false
+                },
+                "Sendanemail_Body": {
+                  "type": "string",
+                  "format": "html",
+                  "description": "Specify the body of the mail.",
+                  "x-ms-powerflows-param-ispartial": true
+                }
+              },
+              "required": [
+                "Createitem_SiteAddress",
+                "Createitem_ListName",
+                "Createitem_Item",
+                "Sendanemail_To",
+                "Sendanemail_Subject",
+                "Sendanemail_Body"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Create_item": {
+          "runAfter": {},
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "PostItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "@triggerBody()['Createitem_SiteAddress']",
+              "table": "@triggerBody()['Createitem_ListName']",
+              "item": "@triggerBody()['Createitem_Item']"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Send_an_email": {
+          "runAfter": {
+            "Create_item": [
+              "Succeeded"
+            ]
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@triggerBody()['Sendanemail_To']",
+              "emailMessage/Subject": "@triggerBody()['Sendanemail_Subject']",
+              "emailMessage/Body": "<p>@{triggerBody()['Sendanemail_Body']}</p>"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "d73f9d6169314b2e86883f23c003fc22"
+  },
+  "schemaVersion": "1.0.0.0"
+}

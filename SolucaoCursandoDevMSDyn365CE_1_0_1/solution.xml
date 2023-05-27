@@ -1,0 +1,114 @@
+<ImportExportXml version="9.2.23052.188" SolutionPackageVersion="9.2" languagecode="1046" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>SolucaoCursandoDevMSDyn365CE</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Solução Cursando Desenvolvimento MS Dynamics 365 CE" languagecode="1046" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Solução Cursando Desenvolvimento MS Dynamics 365 CE" languagecode="1046" />
+    </Descriptions>
+    <Version>1.0.1</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>curso</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Curso" languagecode="1046" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>curso</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>82566</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="curso_alunos" behavior="0" />
+      <RootComponent type="1" schemaName="curso_cursosdisponiveis" behavior="0" />
+      <RootComponent type="1" schemaName="curso_cursoxinstrutores" behavior="0" />
+      <RootComponent type="1" schemaName="curso_instrutor" behavior="0" />
+      <RootComponent type="29" id="{1f186fbe-c2fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{22cc3e16-c4fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{29888836-14fc-ed11-8f6e-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{40b0c3b5-c3fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{4cc1b0ba-c8fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{5c077e71-dbfc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{6526c758-ccfc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{75d4222a-c3fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{acfed201-ccfc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{c7173e78-c7fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{c96e513e-c7fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="29" id="{eef13575-c3fc-ed11-8f6d-6045bd3b633e}" behavior="0" />
+      <RootComponent type="62" schemaName="curso_Cursosetreinamentos" behavior="0" />
+      <RootComponent type="62" schemaName="curso_Treinamentos" behavior="0" />
+      <RootComponent type="80" schemaName="curso_Treinamentos" behavior="0" />
+      <RootComponent type="300" schemaName="curso_appinstrutoreshabilitados_82da5" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="curso_Treinamentos" displayName="Treinamentos" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Canvas.CanvasControl" displayName="MscrmControls.Canvas.CanvasControl" solution="BaseCustomControlsCore (9.0.2305.2015)" />
+        <Dependent type="60" displayName="Informações" parentDisplayName="Cursos Disponíveis" id="{44528554-a7f9-464b-ae2e-e9f35de57fc5}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>
